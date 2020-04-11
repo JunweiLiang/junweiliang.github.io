@@ -1,0 +1,23 @@
+# how to change the content
+
+
+first time:
+	fs sa /afs/cs/user/junweil/www wwwsrv:http-ftp rl
+	fs sa /afs/cs/user/junweil wwwsrv:http-ftp l
+	# all other sub-directories
+	fs sa /afs/cs/user/junweil/www/webpage wwwsrv:http-ftp rl
+	fs sa /afs/cs/user/junweil/www/camera_ready wwwsrv:http-ftp rl
+	fs sa /afs/cs/user/junweil/www/posters wwwsrv:http-ftp rl
+	fs sa /afs/cs/user/junweil/www/resources wwwsrv:http-ftp rl
+	fs sa /afs/cs/user/junweil/www/slides wwwsrv:http-ftp rl
+
+in www/.htaccess
+	order deny,allow
+	allow from all
+	IndexIgnore * # to disable indexing list
+
+1. connect to junweil@linux.gp.cs.cmu.edu
+
+
+direct change index.html and then scp
+	scp index.html junweil@linux.gp.cs.cmu.edu:~/www/
