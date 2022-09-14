@@ -102,12 +102,79 @@
   </div>
 </div>
 
+<style type="text/css">
+  #main > div.content > div.featured{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: left;
+    height: 360px;
+
+  }
+  #main > div.content > div.featured > div.feat_item{
+    width: 250px;
+    margin: 10px 10px;
+    border: 1px silver solid;
+    border-radius: 10px;
+    padding-top: 20px;
+  }
+  #main > div.content > div.featured > div.feat_item img{
+    width: 100%;
+  }
+
+  #main > div.content > div.featured > div.feat_item > div.feat_text{
+    padding: 5px 15px;
+  }
+  #main > div.content > div.featured > div.feat_item > div.feat_title{
+    font-weight: bold;
+    font-size: 1.1em;
+  }
+  #main > div.content > div.featured > div.feat_item > div.feat_domain{
+    color: gray;
+    font-size: 0.8em;
+    padding: 1px 15px;
+  }
+  #main > div.content > div.featured > div.feat_item > div.feat_subtitle{
+    font-size: 1em;
+  }
+
+</style>
 <div id="main">
 
   <div class="title">
     <a class="title_link" id="teaching" href="#teaching">Teaching / Talks</a>
   </div>
   <div class="content">
+
+    <!-- a block like linkedIn Featured block
+        CSS 3: flex box, replacing float: https://www.w3schools.com/css/css3_flexbox.asp
+    -->
+    <div class="featured">
+      <div class="feat_item">
+        <a target="_blank" href="https://www.bilibili.com/video/BV1Y44y1x7nv?vd_source=4cbf5025bcb764847b5b673a6eaccf67"><img class="feat_img" src="./resources/talk_p1.jpg"></img></a>
+        <div class="feat_text feat_title">Talk | CMU博士梁俊卫: 视频中的行人轨迹预测</div>
+        <div class="feat_text feat_domain">bilibili.com</div>
+        <div class="feat_text feat_subtitle">将门-TechBeat技术社区第348期线上分享Talk！</div>
+      </div>
+      <div class="feat_item">
+        <a target="_blank" href="https://www.zhihu.com/zvideo/1519971296489766912"><img class="feat_img" src="./resources/talk_p2.jpg"></img></a>
+        <div class="feat_text feat_title">CVPR'22 AI City Challenge - Driver Action Detection Runner-up Solution</div>
+        <div class="feat_text feat_domain">zhihu.com</div>
+        <div class="feat_text feat_subtitle">Code and models are released.</div>
+      </div>
+      <div class="feat_item">
+        <a target="_blank" href="https://www.zhihu.com/zvideo/1360358338241421312"><img class="feat_img" src="./resources/talk_p3.jpg"></img></a>
+        <div class="feat_text feat_title">Public Safety Broadband Stakeholder Meeting hosted by NIST</div>
+        <div class="feat_text feat_domain">zhihu.com</div>
+        <div class="feat_text feat_subtitle">Presented in San Diego, 2018.</div>
+      </div>
+      <div class="feat_item">
+        <a target="_blank" href="https://www.zhihu.com/zvideo/1347518864994045952"><img class="feat_img" src="./resources/talk_p4.jpg"></img></a>
+        <div class="feat_text feat_title">Guest Lecture at CMU 11-775: Intro to Machine learning in Computer Vision </div>
+        <div class="feat_text feat_domain">zhihu.com</div>
+        <div class="feat_text feat_subtitle">Spring 2020.</div>
+      </div>
+    </div>
     <ul>
       <li>
         <span class="title">Invited Presentation @CVPR: Naturalist Driver Action Recognition
