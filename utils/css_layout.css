@@ -30,7 +30,7 @@
         position: absolute;
         top: 0;
         left: 0;
-        overflow: hidden;
+        overflow: auto;
         background: #0b4c75;
         width:250px;
         height: 100%;
@@ -96,6 +96,7 @@
     right: 0;  /* right and bottom property is crucial */
     bottom: 0;
     overflow: auto;
+        min-width: 500px;
   }
 
 
