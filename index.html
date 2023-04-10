@@ -394,7 +394,41 @@
       </li>
       <li>
         Aminer.cn, AI 2000 ranking (2019 - 2022).
-        <img style="height: 400px" src="resources/ai_2000_2019_2022_rank.jpg"></img>
+        <!-- <img style="height: 400px" src="resources/ai_2000_2019_2022_rank.jpg"></img> -->
+        <!--当把鼠标放在查看上时它会弹出图片，移动开鼠标则会图片隐藏-->
+        <a href="javascript:void(0)" onmouseover="showImage()" onmouseout="hideImage()">查看</a>
+        <style>
+        .popup-container {
+            position: fixed;
+            z-index: 9999;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #fff;
+            border: 1px solid #ccc;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            padding: 10px;
+        }
+        .popup-img {
+            max-width: 100%;
+            max-height: 80%;
+        }
+        </style>
+        <div id="imagePopup" class="popup-container" style="display: none;">
+            <img class="popup-img" src="resources/ai_2000_2019_2022_rank.jpg">
+        </div>
+        <script>
+            var timeoutId;
+            function showImage() {
+                clearTimeout(timeoutId);
+                document.getElementById("imagePopup").style.display = "block";
+            }
+            function hideImage() {
+                timeoutId = setTimeout(function() {
+                    document.getElementById("imagePopup").style.display = "none";
+                }, 500);
+            }
+        </script>
       </li>
     </ul>
   </div>
@@ -500,6 +534,8 @@
     </ul>
   </div>
 -->
+
+<center><script type='text/javascript' id='clustrmaps' src='//cdn.clustrmaps.com/map_v2.js?cl=2d78ad&w=600&t=m&d=toy24-dLavZdwthkRD69wuXGrDBIIm_h8H0OWT2h5dE&co=ffffff&ct=2b1e1e'></script></center>
 
 
 </div>
